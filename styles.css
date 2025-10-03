@@ -22,17 +22,18 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 1520px;
+    max-width: 80vw;
     
 }
 .navigation-button {
-    height: 50px;
-    width: 50px;
+    height: 100px;
+    width: 100px;
     background-color: #ffffff;
     border: none;
     font-size: 3.5rem;
     cursor: pointer;
     transition: transform 0.3s ease;
+    
 }
 
 #previous:hover {
@@ -46,7 +47,8 @@ body {
 .viewport {
     overflow: hidden;
     position: relative;
-    width: 100%;
+    width: 80%;
+
 }
 
 .projects-container {
