@@ -22,18 +22,24 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 80vw;
+    max-width: 90vw;
     
 }
 .navigation-button {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     background-color: #ffffff;
     border: none;
     font-size: 3.5rem;
     cursor: pointer;
     transition: transform 0.3s ease;
     
+}
+.navigation-button-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 #previous:hover {
@@ -47,7 +53,7 @@ body {
 .viewport {
     overflow: hidden;
     position: relative;
-    width: 80%;
+    width: 100%;
 
 }
 
@@ -56,7 +62,7 @@ body {
     flex-direction: row;
     gap: 1rem;
     padding: 2rem;
-    width: 80%; 
+    width: 100%; 
     margin: 0 auto;
     transition: transform 0.3s ease;
 }
@@ -64,8 +70,6 @@ body {
 .project {
     width: 400px;
     height: 300px;
-    border: 2px solid #000000;
-    border-radius: 10px;
     transition: transform 0.3s ease;
     cursor: pointer;
      flex: 0 0 auto;
