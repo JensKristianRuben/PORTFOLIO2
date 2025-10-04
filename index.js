@@ -4,32 +4,38 @@ const projectsContainer = document.getElementById("projectsContainer");
 
 
 
+
+
 let currentSpot = 0;
 const slideWidth = 50; // in pixels
+let scrollInterval;
 
 previousButton.addEventListener("mouseenter", () => {
 
-    if (currentSpot === 0) {
-        return;
-    }
+   scrollInterval = setInterval(() => {
 
-    currentSpot += slideWidth;
-    console.log("prev button was clicked: ", currentSpot);
-    projectsContainer.style.transform = `translateX(${currentSpot}px)`;
-
-
+        if(currentSpot < 0) {
+            currentSpot += slideWidth;
+            console.log(slideWidth);
+            projectsContainer.style.transform = `translateX(${currentSpot}px)`;
+            
+        } 
+   }, 80);
 });
 
 nextButton.addEventListener("mouseenter", () => {
     
-    if (currentSpot <= -2000) {
-        return;
-    }
+    scrollInterval = setInterval(() => {
 
-    currentSpot -= slideWidth;
-    console.log("Next button was clicked: ", currentSpot);
-
-    projectsContainer.style.transform = `translateX(${currentSpot}px)`;
-
+        if (currentSpot > -2000) {
+            currentSpot -= slideWidth;
+            console.log(slideWidth);
+            projectsContainer.style.transform = `translateX(${currentSpot}px)`
+            
+        }
+    }, 80);
 });
+
+previousButton.addEventListener("mouseleave", () => clearInterval(scrollInterval))
+nextButton.addEventListener("mouseleave", () => clearInterval(scrollInterval))
 
